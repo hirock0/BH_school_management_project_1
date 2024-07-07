@@ -1,0 +1,14 @@
+.outDetailsDiv {
+    @apply grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-5;
+  }
+  .outDetailsDiv > div {
+    @apply shadow-sm shadow-white lg:h-96 max-md:h-80 md:h-72 lg:w-64  overflow-hidden rounded-md object-cover;
+  }
+  
+  .outDetailsDiv > div > img {
+    @apply w-full h-full object-cover;
+  }
+
+/* .EventsTextDiv>p{
+  font-size: 2vmin;
+} */

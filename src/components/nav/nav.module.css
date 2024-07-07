@@ -1,0 +1,55 @@
+.TopNavUl>li{
+    @apply cursor-pointer 
+}
+.TopNavUl>li:hover{
+    @apply underline underline-offset-4 
+}
+.TopNavUl>a>li:hover{
+    @apply underline underline-offset-4 
+
+}
+.TopNavUl>li:hover >.Pages{
+    @apply block
+
+}
+.TopNavUl>li:hover>.Gallery{
+    @apply block
+
+}
+
+
+
+
+
+.TopNavUl>li>section>ul>a>li{
+    @apply  p-2 mb-2 rounded-md bg-red-800
+
+}
+.TopNavUl>li>section>ul>a>li:hover{
+    @apply bg-red-900 
+}
+.TopNavUl>li>section>ul>a>li:active{
+    @apply bg-red-950 
+}
+
+
+.SideNavMenuUl>a>li:hover{
+        @apply text-yellow-600
+}
+.SideNavMenuUl>li:hover{
+    @apply text-yellow-600
+}
+.SideNavMenuUl>li:hover .SideUlPages{
+    @apply block
+}
+.SideNavMenuUl>li:hover .SideUlGallery{
+    @apply block
+}
+
+
+
+
+
+.SideNavMenuUl>li>.Pages{
+
+}

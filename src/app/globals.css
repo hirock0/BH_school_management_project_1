@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+.Home_page {
+  @apply pr-10 pl-10  max-sm:pl-5 max-sm:pr-5 text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+/* BackGround Image_start */
+
+@media not all and (min-width: 640px) {
+  .Home_page {
+    background: url("../../public/All_background_Images/home_page_sm3.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 50%;
+    padding-bottom: 40%;
   }
+}
+@media (min-width: 640px) {
+  .Home_page {
+    background: url("../../public/All_background_Images/home_page_md.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 30%;
+    padding-bottom: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .Home_page {
+    background: url("../../public/All_background_Images/Home_Page.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  .Home_page {
+
+    padding-top: 20%;
+
+  }
+
 }
