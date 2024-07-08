@@ -1,55 +1,142 @@
-.TopNavUl>li{
-    @apply cursor-pointer 
+.TopNavUl > li {
+  @apply cursor-pointer;
 }
-.TopNavUl>li:hover{
-    @apply underline underline-offset-4 
+.TopNavUl > li:hover {
+  @apply underline underline-offset-4;
 }
-.TopNavUl>a>li:hover{
-    @apply underline underline-offset-4 
-
+.TopNavUl > a > li:hover {
+  @apply underline underline-offset-4;
 }
-.TopNavUl>li:hover >.Pages{
-    @apply block
-
+/* nested_start */
+/* ========================== */
+/* nav_pages_star */
+.TopNavUl > li:hover > .Pages {
+  @apply block;
 }
-.TopNavUl>li:hover>.Gallery{
-    @apply block
-
+.Pages > ul {
+  background: linear-gradient(45deg, rgb(128, 0, 85), rgb(0, 135, 197));
 }
-
-
-
-
-
-.TopNavUl>li>section>ul>a>li{
-    @apply  p-2 mb-2 rounded-md bg-red-800
-
+.Pages > ul > a > li {
+  background: linear-gradient(45deg, rgb(255, 94, 0), rgba(255, 238, 0, 0.788));
+  @apply p-2 mb-2 rounded-md;
 }
-.TopNavUl>li>section>ul>a>li:hover{
-    @apply bg-red-900 
+.Pages > ul > a > li:hover {
+  box-shadow: 0 0 5px 0px white;
+  background: linear-gradient(45deg, rgb(175, 64, 0), rgba(173, 162, 0, 0.788));
 }
-.TopNavUl>li>section>ul>a>li:active{
-    @apply bg-red-950 
+.Pages > ul > a > li:active {
+  background: linear-gradient(45deg, rgb(156, 57, 0), rgba(139, 130, 0, 0.788));
 }
 
-
-.SideNavMenuUl>a>li:hover{
-        @apply text-yellow-600
+/* nav_Pages_end */
+/* ================================== */
+/* nav_gallery_start */
+.TopNavUl > li:hover > .Gallery {
+  @apply block;
 }
-.SideNavMenuUl>li:hover{
-    @apply text-yellow-600
+.Gallery > ul {
+  background: linear-gradient(45deg, rgb(0, 109, 128), rgb(238, 0, 198));
 }
-.SideNavMenuUl>li:hover .SideUlPages{
-    @apply block
+.Gallery > ul > a > li {
+  background: linear-gradient(45deg, rgb(255, 94, 0), rgba(255, 0, 149, 0.705));
+  @apply p-2 mb-2 rounded-md;
 }
-.SideNavMenuUl>li:hover .SideUlGallery{
-    @apply block
+.Gallery > ul > a > li:hover {
+  box-shadow: 0 0 5px 0px white;
+  background: linear-gradient(45deg, rgb(175, 64, 0), rgb(173, 0, 86));
+}
+.Gallery > ul > a > li:active {
+  background: linear-gradient(45deg, rgb(156, 57, 0), rgba(139, 130, 0, 0.788));
 }
 
+/* nav_gallery_end */
+/* =========================== */
+/* nav_courses_start */
 
+.TopNavUl > li:hover > .Courses {
+  @apply block;
+}
+.Courses > ul {
+  background: linear-gradient(45deg, rgb(255, 174, 0), rgb(97, 0, 177));
+}
+.Courses > ul > a > li {
+  background: linear-gradient(45deg, rgb(255, 94, 0), rgba(255, 238, 0, 0.788));
+  @apply p-2 mb-2 rounded-md;
+}
+.Courses > ul > a > li:hover {
+  box-shadow: 0 0 5px 0px white;
+  background: linear-gradient(45deg, rgb(175, 64, 0), rgba(173, 162, 0, 0.788));
+}
+.Courses > ul > a > li:active {
+  background: linear-gradient(45deg, rgb(156, 57, 0), rgba(139, 130, 0, 0.788));
+}
 
+/* nav_courses_start */
+/* ========================= */
+/* nested_end */
+/* ====================================== */
 
+/* Top_Nav_end */
+/* ================================================================= */
+/* side_nav_start */
+.SideNavMenuUl > a > li:hover {
+  @apply text-yellow-600;
+}
+.SideNavMenuUl > li:hover {
+  @apply text-yellow-600;
+}
 
-.SideNavMenuUl>li>.Pages{
+/* pages_start */
 
+.SideNavMenuUl > li:hover .SideUlPages {
+  @apply block;
+}
+.SideUlPages > ul li:hover {
+  box-shadow: 0 5px 8px 0px rgba(0, 0, 0, 0.397);
+  @apply bg-slate-700 text-slate-300;
+}
+.SideUlPages > ul li {
+  @apply p-2 mb-2 rounded-md bg-slate-600;
+}
+.SideUlPages > ul {
+  @apply text-white bg-emerald-400;
+}
+
+/* pages_end */
+
+/* Gallery_start */
+
+.SideNavMenuUl > li:hover .SideUlGallery {
+  @apply block;
+}
+.SideUlGallery > ul li:hover {
+  box-shadow: 0 5px 8px 0px rgba(255, 255, 255, 0.397);
+  @apply bg-slate-700 text-slate-300;
+}
+.SideUlGallery > ul li {
+  @apply p-2 mb-2 rounded-md bg-slate-600;
+}
+.SideUlGallery > ul {
+  @apply text-white bg-red-500;
+}
+
+/* Gallery_end */
+
+/* coursese_start */
+.SideNavMenuUl > li:hover .SideUlCourses {
+  @apply block;
+}
+.SideUlCourses > ul li:hover {
+  box-shadow: 0 5px 8px 0px rgba(0, 0, 0, 0.397);
+  @apply bg-slate-700 text-slate-300;
+}
+.SideUlCourses > ul li {
+  @apply p-2 mb-2 rounded-md bg-slate-600;
+}
+.SideUlCourses > ul {
+  @apply text-white bg-yellow-500;
+}
+/* coursese_end */
+
+.SideNavMenuUl > li > .Pages {
 }

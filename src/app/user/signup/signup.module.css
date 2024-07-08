@@ -1,0 +1,18 @@
+.main{
+    background: linear-gradient(rgba(0, 0, 0, 0.575),rgba(0, 0, 0, 0.568),rgba(0, 0, 0, 0.575)), url("../../../../public/All_background_Images/signUpPage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main input[type="checkbox"]{
+    @apply w-4
+}
+.main input {
+    @apply outline-none pl-2 h-10 rounded-md text-black w-full sm:h-14
+}
+.LeftBox{
+    background: linear-gradient(rgba(0, 0, 0, 0.671),rgba(0, 0, 0, 0.466),rgba(0, 0, 0, 0.548)), url("../../../../public/All_background_Images/signup2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

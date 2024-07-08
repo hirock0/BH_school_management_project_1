@@ -71,7 +71,7 @@ const Task_Card = () => {
 
   return (
     <section
-      style={{ paddingLeft: "10%", paddingRight: "10%" }}
+    
       className={ `${poppins.className}`}
     >
       {/* box_div_start */}

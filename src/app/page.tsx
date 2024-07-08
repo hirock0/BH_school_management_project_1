@@ -20,24 +20,31 @@ const Home = () => {
     <main className='AllNodes'>
       
       <section className=" Home_page h-full  ">
-        <div className=" "  >
-            <div style={{marginLeft:"10%", }} className={`${bitter.className} rounded-md flex flex-col gap-1 backdrop:filter backdrop-blur-sm w-fit `}>
-              <h1 className=' text-7xl max-md:text-6xl max-sm:text-4xl font-semibold '>Your Kids</h1>
-              <h1 className=' text-7xl max-md:text-6xl max-sm:text-4xl font-semibold '>Deserve the</h1>
-              <h1 className=' text-2xl opacity-80 lg:text-6xl'>Best Education</h1>
-              <p className=' opacity-80  text-sm max-sm:text-xs'>Active Learning Export Teachers & Safe Environment </p>
-            </div>
-            <div className=" mt-10">
-              <button style={{marginLeft:"10%"}} className=' max-md:w-32 max-md:text-xs  w-52 h-8 rounded-full bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700'>Admission Now</button>
-            </div>
-        </div>
-      </section>
-      <section>
-        <Task_Card/>
-      </section>
-      <section  style={{ paddingLeft: "10%", paddingRight: "10%" }} className=' mt-10 max-sm:mt-5 pb-10 '>
-          <VideoCard/>
-      </section>
+       
+              <div className="w-5/6 m-auto "  >
+                  <div  className={`${bitter.className}  rounded-md flex flex-col gap-1 backdrop:filter backdrop-blur-sm `}>
+                    <h1 className=' text-7xl max-md:text-6xl max-sm:text-4xl font-semibold '>Your Kids</h1>
+                    <h1 className=' text-7xl max-md:text-6xl max-sm:text-4xl font-semibold '>Deserve the</h1>
+                    <h1 className=' text-2xl opacity-80 lg:text-6xl'>Best Education</h1>
+                    <p className=' opacity-80  text-sm max-sm:text-xs'>Active Learning Export Teachers & Safe Environment </p>
+                  </div>
+                  <div className=" mt-10  ">
+                    <button className='  max-md:w-32 max-md:text-xs  w-52 h-8 rounded-full bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700'>Admission Now</button>
+                  </div>
+              </div>
+          </section>
+
+          <section className=' w-5/6 m-auto'>
+                  <section className=' '>
+                    <Task_Card/>
+                  </section>
+                  <section  className=' mt-10 max-sm:mt-5 pb-10 '>
+                      <VideoCard/>
+                  </section>
+                  <section className=' ' >
+                      
+                  </section>
+        </section>
     </main>
   )
 }

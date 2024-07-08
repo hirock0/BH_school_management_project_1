@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav/Nav";
 import Bottom from "@/components/bottom/Bottom";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body className={inter.className} style={{maxWidth:"1600px", margin:"0 auto"}}>
+        <Toaster 
+          toastOptions={{
+            style:{
+              background:"#00E3F0",
+              color:"black",
+             
+            }
+          }}
+        />
         <section><Nav/></section>
         <section className=" ">{children}</section>
         <section><Bottom/></section>
