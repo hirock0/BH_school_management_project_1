@@ -60,7 +60,7 @@ const Signup = () => {
   };
 
   return (
-    <main className={`${Style.main} ${open_sans.className} pb-10 pt-24`}>
+    <main style={{minHeight:"100vh"}}  className={`${Style.main} ${open_sans.className} pb-10 pt-24`}>
       <section className=" w-5/6 m-auto h-full mt-10  ">
         <div className=" flex max-md:flex-col h-full">
           {/* ================================================== */}

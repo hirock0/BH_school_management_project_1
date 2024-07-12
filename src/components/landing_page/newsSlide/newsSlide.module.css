@@ -1,0 +1,23 @@
+
+
+.news_scroll{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    animation: scroll 20s linear infinite;
+    transform: translateX(-1600px);
+
+}
+
+.news_item {    
+   
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-1600px);
+    }
+}

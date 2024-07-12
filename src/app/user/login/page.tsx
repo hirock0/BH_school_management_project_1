@@ -12,7 +12,7 @@ const poppins = Poppins({
   weight: ["200", "200"],
   subsets: ["latin"],
 });
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -21,17 +21,21 @@ import { BsGithub } from "react-icons/bs";
 
 const Login = () => {
   const [passwordChacker, setPasswordChacker] = useState(false);
+  const[BtnDisabled,setBtnDisabled]=useState(false)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmitData = (data: any) => {
     console.log(data);
+    setBtnDisabled(true)
   };
 
+
   return (
-    <main className={`${Style.main} ${open_sans.className} pb-10 pt-24`}>
+    <main style={{minHeight:"100vh"}} className={`${Style.main} ${open_sans.className} pb-10 pt-24`}>
       <section className=" w-5/6 m-auto h-full mt-10  ">
         <div className=" flex max-md:flex-col h-full">
           {/* ================================================== */}
@@ -70,7 +74,7 @@ const Login = () => {
           {/* ============================================== */}
 
           {/* right_sction_start */}
-          <div className=" text-white overflow-hidden  lg:w-3/6 w-full max-md:w-full h-full  backdrop:filter backdrop-blur-3xl rounded-md pb-10 ">
+          <div className=" text-white overflow-hidden  lg:w-3/6 md:w-4/6 max-md:w-4/5 max-sm:w-full m-auto h-full  backdrop:filter backdrop-blur-3xl rounded-md pb-10 ">
             <h1 className=" text-center mt-5 text-xl">Signup Please</h1>
             {/* form_start */}
             <form
@@ -87,9 +91,9 @@ const Login = () => {
                   placeholder="Email or Number"
                   className=" "
                 />
-                {errors.email && <p>This field is required !</p>}
+                {errors.email && <p className=" text-cyan-600 rounded-full flex items-center justify-center text-xs md:text-base">Email or number is blank!</p>}
               </div>
-              <div className=" rounded-sm  ">
+              <div className=" ">
                 <h1>Password</h1>
                 <input
                   {...register("password", { required: true })}
@@ -99,11 +103,10 @@ const Login = () => {
                   placeholder="Password"
                   className=" "
                 />
-                {errors.password && <p>Password is blank !</p>}
+                {errors.password && <p className="text-cyan-600 rounded-full flex items-center justify-center text-xs md:text-base">Password is blank !</p>}
               </div>
 
-              <div className=" rounded-sm  ">
-                <h1>Check Password</h1>
+              <div className=" rounded-sm  h-5 flex items-center ">
                 <input
                   onChange={() => setPasswordChacker(!passwordChacker)}
                   type="checkbox"
@@ -137,10 +140,10 @@ const Login = () => {
               <div className=" lg:w-4/5 md:w-3/6 sm:w-3/5 max-sm:w-4/5">
                 {/* btn_part_start */}
                 <div className=" w-full flex items-center justify-center gap-5">
-                  <button className="  w-full h-8 rounded-full flex items-center justify-center bg-emerald-400">
+                  <button disabled={BtnDisabled} className={` ${BtnDisabled?"opacity-60":"opacity-100"}  w-full h-8 rounded-full flex items-center justify-center bg-emerald-400`}>
                     <BsGoogle />
                   </button>
-                  <button className="  w-full  h-8 rounded-full flex items-center justify-center bg-cyan-600">
+                  <button disabled={BtnDisabled} className={`  ${BtnDisabled?"opacity-60":"opacity-100"}  w-full  h-8 rounded-full flex items-center justify-center bg-cyan-600`}>
                     <BsGithub />
                   </button>
                 </div>
